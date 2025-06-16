@@ -72,15 +72,14 @@ void VideoSlider::paintEvent(QPaintEvent *event) {
 
     QRect grooveRect = rect().adjusted(2, 10, -2, -10);
     qreal progress = qreal(value()-minimum()) / qreal(maximum()-minimum());
-    QRectF progressRect = grooveRect.adjusted(0, 0,
-                                              (grooveRect.width()-12)*progress - grooveRect.width(), 0);
+    QRectF progressRect = grooveRect.adjusted(0, 0, (grooveRect.width()-12)*progress - grooveRect.width(), 0);
 
-    // 背景轨道
+    //使用背景轨道
     painter.setPen(Qt::NoPen);
     painter.setBrush(QColor(225,225,225,150));
     painter.drawRoundedRect(grooveRect, 2, 2);
 
-    // 进度条
+    //刻画进度条
     QLinearGradient progGrad(progressRect.topLeft(), progressRect.topRight());
     progGrad.setColorAt(0, QColor(0,122,255));
     progGrad.setColorAt(1, QColor(10,132,255));
@@ -88,8 +87,7 @@ void VideoSlider::paintEvent(QPaintEvent *event) {
     painter.drawRoundedRect(progressRect, 2, 2);
 
     // 滑块
-    QRectF handleRect(grooveRect.left() + (grooveRect.width()-12)*progress,
-                      grooveRect.center().y()-6, 12, 12);
+    QRectF handleRect(grooveRect.left() + (grooveRect.width()-12)*progress, grooveRect.center().y()-6, 12, 12);
     QPainterPath path;
     path.addEllipse(handleRect);
     painter.setBrush(QBrush(Qt::white));
