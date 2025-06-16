@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/back.png</file>
+        <file>images/black_reverse_icon.png</file>
+        <file>images/double_backward_arrow.png</file>
+        <file>images/double_forward_arrow.png</file>
+        <file>images/folder_1.png</file>
+        <file>images/folder_2.png</file>
+        <file>images/Fullscreen.png</file>
+        <file>images/mute.png</file>
+        <file>images/play.png</file>
+        <file>images/play_1.jpg</file>
+        <file>images/Setting.png</file>
+        <file>images/Setting_!.png</file>
+        <file>images/sound.png</file>
+        <file>images/stop.png</file>
+    </qresource>
+</RCC>
